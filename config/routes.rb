@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'static_pages/login'
+  get '/login', to: 'static_pages#login', as: 'login'
   root 'static_pages#login'
 end
