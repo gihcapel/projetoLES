@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  storage: MyString
+  perishability: MyString
+  weightandquant: 
+  price: 
+  furnisher: MyString
+
+two:
+  name: MyString
+  type: 
+  storage: MyString
+  perishability: MyString
+  weightandquant: 
+  price: 
+  furnisher: MyString
