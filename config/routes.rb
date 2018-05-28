@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   
   get '/signup', to: 'users#new'
   get '/login', to: 'static_pages#login', as: 'login'
+  resources :users
   
-  get '/newproduct', to: 'products#new'
+  get '/products', to: 'products#new'
   
 end

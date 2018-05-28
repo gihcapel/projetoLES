@@ -1,0 +1,35 @@
+<% provide(:title, 'Cadastrar Produto') %>
+<h1>Cadastrar Produto</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@product) do |f| %>
+    <%= render 'shared/error_messages_product' %>
+    
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :type %>
+      <%= f.text_field :type, class: 'form-control' %>
+      
+      <%= f.label :storage %>
+      <%= f.text_field :storage, class: 'form-control' %>
+      
+      <%= f.label :perishability %>
+      <%= f.text_field :perishability, class: 'form-control' %>
+      
+      <%= f.label :weightandquant %>
+      <%= f.text_field :weightandquant, class: 'form-control' %>
+      
+      <%= f.label :price %>
+      <%= f.text_field :price, class: 'form-control' %>
+      
+      <%= f.label :furnisher %>
+      <%= f.text_field :furnisher, class: 'form-control' %>
+      
+      <%= f.submit "Cadastrar produto", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<!-- precisa linkar ainda -->
