@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180529145327) do
+ActiveRecord::Schema.define(version: 20180529214332) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.string "type"
     t.string "storage"
     t.string "perishability"
     t.string "weightandquant"
@@ -36,6 +35,7 @@ ActiveRecord::Schema.define(version: 20180529145327) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.string "remember_digest"
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

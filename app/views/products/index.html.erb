@@ -1,0 +1,12 @@
+<% provide(:title, 'Lista de produtos') %>
+<h1>Lista de Produtos</h1>
+
+<%= will_paginate %>
+
+<ul class="users">
+  <% @products.each do |product| %>
+    <%= render @products %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

@@ -6,12 +6,12 @@ class User < ApplicationRecord
     validates(:email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false})
     validates(:phone, presence: true, length: { maximum: 10 })
-    validates(:register, presence: true, length: { maximum: 10 })
+    validates(:register, presence: true, length: { maximum: 11 })
     validates(:cpf, presence: true, length: { maximum: 11 })
     validates(:role, presence: true, length: { maximum: 50 })
     validates(:adm, length: { maximum: 10 })
     has_secure_password
-    validates(:password, presence: true, length: { minimum: 6 })
+    validates(:password, presence: true, length: { minimum: 6 }, allow_nil: true)
     
     # Returns the hash digest of the given string.
   def User.digest(string)
