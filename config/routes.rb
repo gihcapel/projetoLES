@@ -8,13 +8,13 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  get  '/edit_user/:id' => 'users#edit_user'
   resources :users
   
-  get '/products', to: 'products#new'
-  get '/product', to: 'products#index'
+  get '/product', to: 'products#new'
+  get '/products', to: 'products#index'
+  get  '/edit_product/:id', to: 'products#edit_product'
+  delete 'products/:id', to: 'products#destroy'
   resources :products
   
-  
-  
-  
-end
+  end

@@ -1,34 +1,29 @@
 <% provide(:title, "Editar produto") %>
-<h1>Edite seu produto</h1>
+<h1>Editar produto</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@product) do |f| %>
+    <%= form_for(@products) do |f| %>
 
-      <%= f.label :name %>
+      <%= f.label :name, 'Nome' %>
       <%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :storage %>
+      <%= f.label :storage, 'Local de armazenamento' %>
       <%= f.text_field :storage, class: 'form-control' %>
       
-      <%= f.label :perishability %>
+      <%= f.label :perishability, 'Perecibilidade' %>
       <%= f.text_field :perishability, class: 'form-control' %>
       
-      <%= f.label :weightandquant %>
+      <%= f.label :weightandquant, 'Peso ou quantidade' %>
       <%= f.text_field :weightandquant, class: 'form-control' %>
       
-      <%= f.label :price %>
+      <%= f.label :price, 'Preço' %>
       <%= f.text_field :price, class: 'form-control' %>
       
-      <%= f.label :furnisher %>
+      <%= f.label :furnisher, 'Fornecedor' %>
       <%= f.text_field :furnisher, class: 'form-control' %>
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
-
-    <div class="gravatar_edit">
-      <%= gravatar_for @product %>
-      <a href="http://gravatar.com/emails" target="_blank">change</a>
-    </div>
   </div>
 </div>

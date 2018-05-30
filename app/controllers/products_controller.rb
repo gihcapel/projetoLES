@@ -1,9 +1,5 @@
 class ProductsController < ApplicationController
   
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :correct_user,   only: [:edit, :update]
-  before_action :admin_user,     only: :destroy
-   
   def index
     @products = Product.paginate(page: params[:page])
   end
@@ -29,23 +25,27 @@ class ProductsController < ApplicationController
    
   def edit
     @product = Product.find(params[:id])
+    render :edit
   end
   
   def update
     @product = Product.find(params[:id])
     if @product.update_attributes(product_params)
       flash[:success] = "Produto editado com sucesso"
-      redirect_to @product
+      redirect_to @products
     else
       render 'edit'
     end
   end
   
   def destroy
-    Product.find(params[:id]).destroy
+    @product = Product.find(params[:id])
+    @product.destroy
     flash[:success] = "Produto deletado"
-    redirect_to products_url
+    redirect_to product_url
   end
+  
+  
 
   private
 
