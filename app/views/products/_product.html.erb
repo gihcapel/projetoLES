@@ -2,7 +2,8 @@
 
 <li>
   <%= link_to product.name, products_path %>
- <%= link_to "excluir", product_path(product), method: :delete,
+ <%= link_to "excluir",{ action: :destroy, id: product.id }, method: :delete,
               data: { confirm: "You sure?" } %>
   <%= link_to "editar", edit_product_path(product) %>
 </li>
+

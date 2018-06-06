@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.save
       flash[:success] = "Produto cadastrado com sucesso!"
-      redirect_to @product
+      redirect_to products_url
     else
       render 'new'
     end
@@ -34,7 +34,7 @@ class ProductsController < ApplicationController
       flash[:success] = "Produto editado com sucesso"
       redirect_to @products
     else
-      render 'edit'
+      render :edit
     end
   end
   
@@ -42,7 +42,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.destroy
     flash[:success] = "Produto deletado"
-    redirect_to product_url
+    redirect_to products_url
   end
   
   
