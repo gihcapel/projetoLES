@@ -29,6 +29,7 @@ class ProductsController < ApplicationController
   end
   
   def update
+  respond_to do |format|
     @product = Product.find(params[:id])
     if @product.update_attributes(product_params)
       flash[:success] = "Produto editado com sucesso"
@@ -36,6 +37,7 @@ class ProductsController < ApplicationController
     else
       render :edit
     end
+  end
   end
   
   def destroy

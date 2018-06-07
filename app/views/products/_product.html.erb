@@ -1,9 +1,13 @@
 <!--colocar botão de cadastrar produto-->
 
 <li>
-  <%= link_to product.name, products_path %>
- <%= link_to "excluir",{ action: :destroy, id: product.id }, method: :delete,
+  <%= link_to product.name, product %>
+  <% if current_user.admin? %>
+     <%= link_to "excluir",{ action: :destroy, id: product.id }, method: :delete,
               data: { confirm: "You sure?" } %>
-  <%= link_to "editar", edit_product_path(product) %>
+  <% end %>
+  <% if current_user.admin? %>
+      <%= link_to "editar", edit_product_path(product) %>
+  <% end %>
 </li>
 
