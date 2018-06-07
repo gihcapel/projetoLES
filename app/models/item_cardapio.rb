@@ -1,2 +1,0 @@
-class ItemCardapio < ApplicationRecord
-end

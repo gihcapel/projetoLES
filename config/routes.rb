@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'cardapios/new'
+
   get 'sessions/new'
 
   root 'sessions#new'
@@ -14,7 +16,10 @@ Rails.application.routes.draw do
   get '/product', to: 'products#new'
   get '/products', to: 'products#index'
   get  '/edit_product/:id', to: 'products#edit_product'
-  
   resources :products
+  
+  get '/cardapio', to: 'cardapios#new'
+  get  '/edit_cardapio/:id', to: 'cardapios#edit_cardapio'
+  resources :cardapios
   
   end

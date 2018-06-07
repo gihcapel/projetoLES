@@ -1,0 +1,13 @@
+<% provide(:title, 'Itens do Cardápio') %>
+<h1>Itens do Cardápio</h1>
+
+
+
+<ul class="users">
+  <% @cardapios.each do |cardapio| %>
+    <li>
+       <%= render @cardapios %>
+    </li>
+  <% end %>
+</ul>
+
