@@ -1,13 +1,11 @@
 <% provide(:title, 'Itens do Cardápio') %>
 <h1>Itens do Cardápio</h1>
 
+<%= link_to "Cadastrar item no cardápio", cardapio_path, class: 'cadastrarcardapio' %>
 
-
+<%= will_paginate %>
 <ul class="users">
-  <% @cardapios.each do |cardapio| %>
-    <li>
-       <%= render @cardapios %>
-    </li>
-  <% end %>
+   <%= render @cardapios %>
 </ul>
+
 

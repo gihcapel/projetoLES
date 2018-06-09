@@ -204,7 +204,7 @@ input {
 }
     
 .cadastrarproduto{
-  background-color: #DC143C; /* Green */
+  background-color: #00C2C5; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -213,10 +213,11 @@ input {
   display: inline-block;
   font-size: 16px;
   margin-left:42%;
+  border-radius: 4px;
 }
 
 .cadastrarproduto:hover{
-  background-color: #DC143C; /* Green */
+  background-color: #00C2C5; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -225,18 +226,106 @@ input {
   display: inline-block;
   font-size: 16px;
   margin-left:42%;
+  border-radius: 4px;
 }
 
-.editarproduto{
-  background-color: #DC143C; /* Green */
+.editar{
+  background-color: #00C2C5; 
   border: none;
   color: white;
   padding: 7px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  border-radius: 4px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
+.cadastrarcardapio{
+  background-color: #00C2C5;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left:39%;
+  border-radius: 4px;
+}
 
+.cadastrarcardapio:hover{
+  background-color: #00C2C5; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left:39%;
+  border-radius: 4px;
+}
+
+.cadastrarfuncionario{
+  background-color: #00C2C5;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left:40%;
+  border-radius: 4px;
+}
+
+.cadastrarfuncionario:hover{
+  background-color: #00C2C5; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left:40%;
+  border-radius: 4px;
+}
+
+.table-hover{
+  margin-top: 3%;
+}
+
+.excluir{
+  background-color: #DE0303; 
+  border: none;
+  color: white;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+li{
+  display: block;
+}
+
+.qualidade{
+  background-color: #DE0303; 
+  border: none;
+  color: white;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
 
 

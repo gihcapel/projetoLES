@@ -1,13 +1,17 @@
+<table class="table table-hover">
+<tbody>
+  <tr>
+    <td><%= link_to product.name, product %></td>
+    <% if current_user.admin? %>
+        <td><%= link_to "Editar", edit_product_path(product), class: "editar" %>
+    <% end %>
+    <% if current_user.admin? %>
+       <%= link_to "Excluir",{ action: :destroy, id: product.id }, method: :delete,
+              data: { confirm: "You sure?" }, class: "excluir" %></td>
+    <% end %>
+  </tr>
+</tbody>
+</table>
+    
 
-
-<li>
-  <%= link_to product.name, product %>
-  <% if current_user.admin? %>
-     <%= link_to "excluir",{ action: :destroy, id: product.id }, method: :delete,
-              data: { confirm: "You sure?" } %>
-  <% end %>
-  <% if current_user.admin? %>
-      <%= link_to "editar", edit_product_path(product) %>
-  <% end %>
-</li>
 
