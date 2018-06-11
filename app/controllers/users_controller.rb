@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Bem vindo!"
+      flash[:success] = "Usuário cadastrado com sucesso!"
       redirect_to @user
     else
       render 'new'
@@ -50,7 +50,7 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation, :register, :phone, :cpf,
-                                   :role, :adm)
+                                   :role)
     end
     
     # Confirms a logged-in user.
