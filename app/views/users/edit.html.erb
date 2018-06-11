@@ -1,36 +1,38 @@
-<% provide(:title, "Edit user") %>
-<h1>Update your profile</h1>
+<% provide(:title, "Editar usuário") %>
+<h1>Editar informações do usuário</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
 
-      <%= f.label :name %>
+      <%= f.label :name, 'Nome' %>
       <%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :email %>
+      <%= f.label :email, 'Email' %>
       <%= f.email_field :email, class: 'form-control' %>
       
-      <%= f.label :phone %>
+      <%= f.label :phone, 'Telefone' %>
       <%= f.phone_field :phone, class: 'form-control' %>
       
-      <%= f.label :register %>
+      <%= f.label :register, 'Número de registro' %>
       <%= f.phone_field :register, class: 'form-control' %>
       
-      <%= f.label :cpf %>
+      <%= f.label :cpf, 'CPF' %>
       <%= f.text_field :cpf, class: 'form-control' %>
       
-      <%= f.label :role %>
+      <%= f.label :role, 'Cargo' %>
       <%= f.text_field :role, class: 'form-control' %>
       
-      <%= f.label :adm %>
+      <%= f.label :adm, 'Data de admissão' %>
       <%= f.text_field :adm, class: 'form-control' %>
       
-      <%= f.label :password %>
+      <% if current_user?(@user) %>
+      <%= f.label :password, 'Senha' %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "Confirmar senha" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <% end %>
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>

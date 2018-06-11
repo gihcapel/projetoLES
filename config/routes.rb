@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/product', to: 'products#new'
   get '/products', to: 'products#index'
   get  '/edit_product/:id', to: 'products#edit_product'
+  get '/products/:id', to: 'products#show'
   resources :products
   
   get '/cardapio', to: 'cardapios#new'
