@@ -1,10 +1,40 @@
-<div class="row">
+<!--<div class="profileimage">
+  <h1><%= gravatar_for @user %></>
+</div>-->
+
+<div class="username">
+  <h1><%= @user.name %></h1>
+</div>
+
+<div class="role">
+  <p><%= @user.role %></p>
+</div>
+
+<ul class="list-group">
+  <p class="nome">email</p>
+  <li class="list-group-item"><%= @user.email %></li>
+</ul>
+
+<ul class="list-group">
+  <p class="nome">telefone</p>
+  <li class="list-group-item"><%= @user.phone %></li>
+</ul>
+
+
+
+
+
+
+
+
+
+<!--<div class="row">
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
       </h1>
+      <h2><%= @user.name %></h2>
     </section>
   </aside>
 </div>
@@ -13,4 +43,4 @@
 <p>Número de registro: <%= @user.register %></p>
 <p>CPF: <%= @user.cpf %></p>
 <p>Cargo: <%= @user.role %></p>
-<p>Data de admissão: <%= @user.adm %></p>
+<p>Data de admissão: <%= @user.adm %></p>-->

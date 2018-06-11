@@ -9,7 +9,7 @@ class User < ApplicationRecord
     validates(:register, presence: true, length: { maximum: 11 })
     validates(:cpf, presence: true, length: { maximum: 11 })
     validates(:role, presence: true, length: { maximum: 50 })
-    validates(:adm, length: { maximum: 10 })
+    validates(:adm, presence: true, length: { maximum: 10 })
     has_secure_password
     validates(:password, presence: true, length: { minimum: 6 }, allow_nil: true)
     

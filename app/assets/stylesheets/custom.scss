@@ -336,4 +336,78 @@ li{
   padding-left: 30px;
 }
 
+/* profile */
 
+.profile{
+    
+}
+
+.profileimage{
+    display: block;
+    margin-left:520px;
+    margin-right: auto;
+    width: 50%;
+}
+
+.username{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top:120px;
+    color: #848484;
+}
+
+.role{
+    text-transform: uppercase;
+    display: block;
+    margin-top:-10px;
+    margin-left:520px;
+    color:white;
+    background-color:black;
+    border: none;
+    display: inline-block;
+    padding-top:5px;
+    padding-left:7px;
+    padding-right:7px;
+    border-radius: 4px;
+}
+
+.nome{
+    color: #848484;
+    margin-top:50px;
+    display: block;
+    margin-left:300px;
+}
+
+.campo{
+    margin-top:-20px;
+    display: block;
+    margin-left:300px;
+    background-color:#f2f2f2;
+    border: none;
+    display: inline-block;
+    padding-left:7px;
+    padding-right:390px;
+    border-radius: 4px;
+    font-weight:bold;
+    
+}
+
+.informations1{
+    margin-top:-50px;
+}
+
+.list-group-item{
+    width:45%;
+    display: block;
+    margin-left:300px;
+    border:none;
+    background-color:#f2f2f2;
+    font-weight:bold;
+    margin-top:-10px;
+}
+
+.list-group{
+   margin-top:-10px;
+}
