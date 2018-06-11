@@ -42,12 +42,4 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end
   
-  
-  #Messages
-  
-  def name
-    if name.blank?
-      errors.add :name, 'Nome não pode ser vazio'
-  end
-   
 end
