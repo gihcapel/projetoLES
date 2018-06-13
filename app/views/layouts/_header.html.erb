@@ -28,11 +28,11 @@
               Conta <b class="caret"></b>
             </a> 
             <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li><%= link_to "Perfil", current_user %></li>
+              <li><%= link_to "Configurações", edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to "Log out", logout_path, method: :delete %>
+                <%= link_to "Sair", logout_path, method: :delete %>
               </li>
             </ul>
           </li>
@@ -42,4 +42,3 @@
   </div>
 </header>
 
-<!-- colocar links para produtos e tals -->
